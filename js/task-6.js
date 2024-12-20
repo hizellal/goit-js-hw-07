@@ -5,9 +5,19 @@ function getRandomHexColor() {
 }
 
 const amount = document.querySelector("input");
+amount.className = "amount";
+
 const createBtn = document.querySelector('button[data-create]');
+createBtn.className = "create_btn";
+
 const divContainer = document.querySelector('#boxes');
+divContainer.className = "boxes";
+
 const dellBtn = document.querySelector('button[data-destroy]');
+dellBtn.className = "destroy_btn";
+
+const controls = document.querySelector('#controls');
+controls.className = "controls";
 
 createBtn.addEventListener("click", () => {
   let cicle = 1;
@@ -18,6 +28,7 @@ createBtn.addEventListener("click", () => {
       const createDiv = document.createElement("div");
       createDiv.style.width = `${size}px`;
       createDiv.style.height = `${size}px`;
+      createDiv.className = "create_div";
       divContainer.append(createDiv);
       size += 10;
       createDiv.style.backgroundColor = getRandomHexColor();

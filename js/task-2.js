@@ -33,9 +33,11 @@ images.forEach(image => {
 
   gallery.append(li_image);
 
-  const img = document.createElement("image");
+  const img = document.createElement("img");
   img.setAttribute("src", image.url);
   img.setAttribute("alt", image.alt);
+  img.setAttribute("width", `360px`)
+  img.setAttribute("height", `300px`)
 
   li_image.append(img);
 })
